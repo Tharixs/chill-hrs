@@ -1,76 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CHILL</title>
     <link rel="shortcut icon" href="assets/Logo.svg" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <script>
-        function togglePasswordVisibility() {
-            const passwordInput = document.getElementById('password');
-            const eyeOpen = document.getElementById('eyeOpen');
-            const eyeClosed = document.getElementById('eyeClosed');
-            const isPasswordVisible = passwordInput.type === 'text';
+      function togglePasswordVisibility() {
+        const passwordInput = document.getElementById("password");
+        const eyeOpen = document.getElementById("eyeOpen");
+        const eyeClosed = document.getElementById("eyeClosed");
+        const isPasswordVisible = passwordInput.type === "text";
 
-            // Toggle visibility
-            passwordInput.type = isPasswordVisible ? 'password' : 'text';
+        // Toggle visibility
+        passwordInput.type = isPasswordVisible ? "password" : "text";
 
-            // Toggle icons
-            eyeOpen.classList.toggle('hidden', !isPasswordVisible);
-            eyeClosed.classList.toggle('hidden', isPasswordVisible);
-        }
+        // Toggle icons
+        eyeOpen.classList.toggle("hidden", !isPasswordVisible);
+        eyeClosed.classList.toggle("hidden", isPasswordVisible);
+      }
     </script>
+  </head>
 
-</head>
-
-<body class="bg-cover bg-center bg-no-repeat" style="background-image: url('assets/background-login.jpeg')">
-    <div class="h-screen flex items-center justify-center text-white bg-black/50 p-4">
-        <!-- Form Login -->
-        <div class="flex flex-col items-center rounded-3xl p-8 w-full max-w-md bg-[#181A1CD6] shadow-lg">
-            <img src="assets/Logo.svg" alt="Logo" />
-            <div class="mt-8 mb-8 text-center flex flex-col gap-2">
-                <h3 class="text-3xl font-bold">Masuk</h3>
-                <p class="text-sm font-light">Selamat datang kembali!</p>
-            </div>
-            <form class="flex flex-col w-full p-2">
-                <div class="flex flex-col gap-8">
-                    <div class="flex flex-col gap-2">
-                        <label for="username" class="text-sm">Username</label>
-                        <input id="username" type="text" placeholder="Masukan Username"
-                            class="p-4 border-[1px] rounded-full bg-transparent" />
-                    </div>
-                    <div class="flex flex-col gap-2 relative">
-                        <label for="password" class="text-sm">Kata Sandi</label>
-                        <input id="password" type="password" placeholder="Masukan Kata Sandi"
-                            class="p-4 border-[1px] border-white rounded-full bg-transparent pr-10" />
-                        <button type="button" id="togglePassword"
-                            class="absolute right-2 top-[70%] transform -translate-y-1/2 text-gray-500 hover:text-black"
-                            onclick="togglePasswordVisibility()">
-                            <i id="eyeOpen" class="fas fa-eye"></i>
-                            <i id="eyeClosed" class="fas fa-eye-slash hidden"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="flex mt-4 flex-row justify-between">
-                    <p class="text-sm">Belum punya akun ?<a href="register.html"
-                            class="text-sm ml-2 font-semibold">Daftar</a></p>
-                    <a href="" class="text-sm font-semibold">Lupa kata sandi ?</a>
-                </div>
-                <div class="flex flex-col items-center justify-center w-full mt-8 gap-4">
-                    <button type="submit"
-                        class="bg-[#3D4142] hover:bg-gray-700 p-4 text-white font-light rounded-full w-full">Masuk</button>
-                    <span class="text-sm font-light">Atau</span>
-                    <button type="submit"
-                        class="bg-transparent hover:bg-gray-700 p-4 text-white font-light rounded-full w-full flex items-center justify-center gap-2 border-[1px] border-white">
-                        <i class="fab fa-google"></i>Masuk Dengan Google</button>
-                </div>
-            </form>
+  <body
+    class="bg-cover bg-center bg-no-repeat"
+    style="background-image: url('assets/background-login.jpeg')"
+  >
+    <div
+      class="h-screen flex items-center justify-center text-white bg-black/50 p-4"
+    >
+      <!-- Form Login -->
+      <div
+        class="flex flex-col items-center rounded-3xl p-8 w-full max-w-md bg-[#181A1CD6] shadow-lg"
+      >
+        <img src="assets/Logo.svg" alt="Logo" />
+        <div class="mt-8 mb-8 text-center flex flex-col gap-2">
+          <h3 class="text-3xl font-bold">Masuk</h3>
+          <p class="text-sm font-light">Selamat datang kembali!</p>
         </div>
+        <form class="flex flex-col w-full p-2">
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-2">
+              <label for="username" class="text-sm">Username</label>
+              <input
+                id="username"
+                type="text"
+                placeholder="Masukan Username"
+                class="p-4 border-[1px] rounded-full bg-transparent"
+              />
+            </div>
+            <div class="flex flex-col gap-2 relative">
+              <label for="password" class="text-sm">Kata Sandi</label>
+              <input
+                id="password"
+                type="password"
+                placeholder="Masukan Kata Sandi"
+                class="p-4 border-[1px] border-white rounded-full bg-transparent pr-10"
+              />
+              <button
+                type="button"
+                id="togglePassword"
+                class="absolute right-2 top-[70%] transform -translate-y-1/2 text-gray-500 hover:text-black"
+                onclick="togglePasswordVisibility()"
+              >
+                <i id="eyeOpen" class="fas fa-eye"></i>
+                <i id="eyeClosed" class="fas fa-eye-slash hidden"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex mt-4 flex-row justify-between">
+            <p class="text-sm">
+              Belum punya akun ?<a
+                href="register.html"
+                class="text-sm ml-2 font-semibold"
+                >Daftar</a
+              >
+            </p>
+            <a href="" class="text-sm font-semibold">Lupa kata sandi ?</a>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center w-full mt-8 gap-4"
+          >
+            <button
+              type="submit"
+              class="bg-[#3D4142] hover:bg-gray-700 p-4 text-white font-light rounded-full w-full"
+            >
+              <a href="home.html">Masuk</a>
+            </button>
+            <span class="text-sm font-light">Atau</span>
+            <button
+              type="submit"
+              class="bg-transparent hover:bg-gray-700 p-4 text-white font-light rounded-full w-full flex items-center justify-center gap-2 border-[1px] border-white"
+            >
+              <i class="fab fa-google"></i>Masuk Dengan Google
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
